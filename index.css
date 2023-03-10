@@ -1,0 +1,351 @@
+@font-face {
+    font-family: textFont;
+    src: url("fonts/alcubierreff/AlcubierreFF/Alcubierre.otf");
+  }
+  @font-face {
+    font-family: textFont2;
+    src: url("fonts/halfomania/Halfomania-Regular.ttf");
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: textFont;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./images/ari-he-euQVngjZGSI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    letter-spacing: 0.2rem;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+header{  
+    display: flex;
+    width: 100%;
+    height: 8%;
+}
+.left-nav-bar{
+    padding-inline-start:3rem ;
+    color: black;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    padding-block: 1rem ;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+
+}
+.right-nav-bar{
+    padding-inline-end: 2%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+   
+
+}
+.fade{
+    transition: all 0.3s ease-in-out;
+}
+.right-nav-bar::after{
+    content: "";
+    background: rgb(9,14,17);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(1px);
+    z-index: -1;
+    opacity: 0.3;
+}
+.right-nav-bar > ul, 
+#icon-cont > ul{
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 600;
+ 
+}
+.right-nav-bar > ul > li,
+#icon-cont > ul > li{
+    list-style: none; 
+    padding-inline: 15px;
+
+}
+.right-nav-bar > ul > li > a,
+#icon-cont > ul > li > a{
+    
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    color:whitesmoke;
+
+}
+.right-nav-bar > ul > li > a:hover,
+ #icon-cont > ul > li > a:hover{
+    color: wheat;
+    font-size: 1.2rem;
+}
+#menu-button,#exit-button{
+    display: none; 
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in;
+    color:whitesmoke;
+    background-color: transparent;
+    border: none;
+}
+
+#exit-button{
+         position: absolute;
+         top:1rem;
+         right: 1rem;
+}
+main{
+    display: flex;
+    width: 100%;
+    height: 84%;
+}
+.main-left,.footer-left{
+width: 20%;
+background-color: whitesmoke;
+display: flex;
+flex-direction: column;
+min-width: 170px;
+
+}
+.main-left-upper{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+}
+
+.main-left-middle{
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-left-lower{
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    justify-content: center;
+    letter-spacing: 0.18rem; 
+    transition: all 0.5s ease-in;
+    margin-bottom: 3rem;
+    margin-top: auto;
+    height: 100%;
+   
+}
+.main-left-lower > h2{
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+.main-left-lower > p{
+    margin-right: 1rem;
+      
+}
+.main-right{
+    width: 80%;  
+}
+footer{
+    display: flex;
+    height: 8%;
+ 
+}
+.numbers{
+    font-family: textFont2;
+    letter-spacing: 0rem; 
+    font-size: 4rem;
+}
+.footer-right{
+    position: relative;
+    width: 80%;
+}
+.footer-right-profile{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    background-color: darkblue;
+    position: absolute;
+    top: -40%;
+    left: -3%;
+
+}
+.footer-right-icon{
+    position: absolute;
+    top: -20%;
+    right: 3%;
+    display: flex;
+    gap: 1rem;
+}
+.footer-right-icon > button{
+    background-color: transparent;
+    font-size: 3rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 75%;
+    border: none;
+    cursor: pointer;
+}
+.footer-right-icon > button :hover{  
+    font-size: 2.9rem;
+    color: wheat;
+}
+
+.footer-right-icon > button > i{
+ color: aliceblue;
+}
+#icon-cont{
+    z-index: 1;
+}
+.open-nav{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 100;
+    flex-direction: column;
+    position: absolute;
+    align-items: unset;
+    padding-inline-start: 2rem;
+    transition: all  0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@media all and (max-width: 1024px){
+    .right-nav-bar > ul > li{
+        padding-inline: 10px;
+    }
+    .right-nav-bar > ul{
+        font-size: 1rem;  
+       
+    }
+    .numbers{
+        font-size: 3rem;
+    }
+    #title{
+        font-size: 2rem;
+    }
+    #paragraph{
+        font-size: 0.8rem;
+    }
+
+}
+@media all and (max-width: 980px){
+    .right-nav-bar > ul > li{
+        padding-inline: 5px;
+    }
+    #icon-cont > ul {
+    flex-direction: column;
+    margin-top: 115px;
+    }
+
+    #icon-cont > ul > li{
+       padding-block: 5px;
+
+        }
+  
+}
+@media all and (max-width: 720px){
+    
+    .right-nav-bar > ul,#icon-cont{
+        display: none;
+        justify-content: center;
+    }
+     .right-nav-bar ul{
+        flex-direction: column;
+     }
+     #icon-cont ul{
+        width: 90%;
+        flex-direction: row;
+        font-size: 1rem;
+        justify-content: space-between;
+     }
+     #icon-cont ul li{
+        padding-inline:0;
+     }
+    .right-nav-bar ul li{
+        padding-block: 1rem;
+    }
+
+    #menu-button{
+         display: block;
+        
+    }
+    .left-nav-bar{
+        width: 40%;
+        padding-inline-start:1rem ;
+    }
+    .right-nav-bar{
+        width: 60%;
+    }
+  main{
+    height: 90%;
+    border-left: 1px solid white;
+   }  
+   footer{
+    height: 1%;
+   }   
+   .footer-left{
+    background-color: white;
+    width: 60%;
+    opacity: 0.9;
+   }   
+   .main-right{
+    display: none; 
+
+}
+.main-left{
+ width: 100%;
+ background-color: transparent;
+}
+.main-left-lower{
+    writing-mode: unset;
+    transform: none;
+    margin-top: auto;
+    background-color: aliceblue;
+    height: 150px;
+    padding-inline: 1rem;
+    opacity: 0.9;
+   
+   
+}
+
+.footer-right-icon{
+    opacity: 0.9;
+    top: -13rem;
+    
+}
+.footer-right-icon > button  > i{
+    opacity: 0.8;
+}
+.footer-right-icon > button  > i:hover{
+    opacity: 1;
+}
+.main-left-upper{
+    padding-bottom: 0   ;
+}
+.main-left-middle{
+    padding-top: 0;
+}
+.main-left-lower{
+    margin-bottom: 0;
+}
+
+.fa-solid,.main-left-middle > span {
+    color: white;
+}
+.main-left-lower > p {
+    margin-right: 0;
+ 
+}
+    }
+   
+        
+
