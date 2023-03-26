@@ -117,7 +117,7 @@ const interval = setInterval(function (){
     }
    
        
-}, 5000);
+}, 15000);
 
 navButton.onclick = () => {
     nav.classList.add('open-nav');
